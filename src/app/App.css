@@ -1,0 +1,27 @@
+.App {
+  text-align: center;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+.cart {
+  background-color: black;
+}
+.all {
+  display: center;
+  text-align: center;
+}
+.add {
+  max-width: 1px;
+  max-height: 1px;
+}
+
+.rec {
+  display: center;
+  padding-top: 150px;
+}
+href {
+  display: none;
+}
