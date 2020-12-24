@@ -27,7 +27,7 @@ The plus button is used to add items to the array, it uses materialize template 
 All fields are required along with a photo for the item to be posted. 
 There must be a description with information for contact information 
 and product specificiations. 
- <p align="center">
+ <p align="center" style="width:200px;height:300px;">
 <img src="add.JPG" />
 </p>
 
