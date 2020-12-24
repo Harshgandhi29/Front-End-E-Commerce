@@ -19,7 +19,7 @@ people. You can also add your own items to the array for the public to buy.
 ![image info](shop.JPG)
 
 The plus button is used to add items to the array, it uses materialize template to make the button an 'add icon'. 
-![image info](plus.JPG)
+                                    ![image info](plus.JPG)
 
 All fields are required along with a photo for the item to be posted. 
 There must be a description with information for contact information 
