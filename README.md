@@ -37,4 +37,7 @@ and product specificiations.
 <img src="add.JPG" />
 </p>
 
-The user cna delete 
+The user can delete thier own products/items. 
+ <p align="center"  style="width:200px;height:300px;">
+<img src="plus.JPG" />
+</p>
