@@ -20,7 +20,7 @@ people. You can also add your own items to the array for the public to buy.
 
 The plus button is used to add items to the array, it uses materialize template to make the button an 'add icon'. 
  <p align="center">
- ![image info](plus.JPG)
+<img src="plus.JPG" />
 </p>
 
 
