@@ -2,7 +2,7 @@
 
 
 
-![alt text](login.JPG "Title")
+![image info](./login.JPG)
 
 
 # Getting Started with Create React App
