@@ -14,7 +14,6 @@ If it is not then it will indicate that the password is not correct or the email
 ![image info](Login.JPG)
 
 Once logged in, it gives a message that the user is logged in. It further directs the user to the Shop page and 
-changes the Nav Bar to have options that only display when a user is logged in. 
-
-
-
+changes the Nav Bar to have options that only display when a user is logged in. It gives an array of items posted by different 
+people. You can also add your own items to the array for the public to buy. 
+![image info](shop.JPG)
