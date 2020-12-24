@@ -2,7 +2,7 @@
 
 
 
-![image info](./login.JPG)
+![image info](login.JPG)
 
 
 # Getting Started with Create React App
