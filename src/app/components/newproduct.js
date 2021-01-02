@@ -43,7 +43,7 @@ fileSelectedHandler=event=>{
     handlesubmit= (event)=>{
         event.preventDefault();
         if(this.state.loaded){
-        axios.post('/product', {
+        axios.post('https://crowdbuy.herokuapp.com/product', {
             title: this.state.title,
             description: this.state.description,
             price:this.state.price,
