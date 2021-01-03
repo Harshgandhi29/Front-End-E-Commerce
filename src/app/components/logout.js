@@ -12,9 +12,6 @@ class Logout extends React.Component{
             <div> 
            {localStorage.clear()}
            {   this.props.history.push('/login')}
-           {console.log('logout')}
-           {console.log(localStorage.getItem('jwt'))}
-           {window.location.reload(false)}
             <div>Logout</div>
             </div>
         )
