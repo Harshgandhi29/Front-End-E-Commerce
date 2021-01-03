@@ -104,7 +104,7 @@ remove =()=>{
           {this.state.loading?<div>Loading </div>:(
           <div>
           
-          <div  style={{backgroundImage: 'url(${wallpaper})'}}className="grid-container ">
+          <div className="grid-container ">
 
           {this.state.items.map((value,index)=>{
             return (
