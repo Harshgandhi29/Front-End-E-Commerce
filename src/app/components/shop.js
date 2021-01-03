@@ -4,7 +4,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import { Check } from '@material-ui/icons';
-import wallpaper from "./wallpaper.jpg";
+
 
 
 export default class Shop extends React.Component{
