@@ -9,7 +9,8 @@ export default function Nav (props){
         return( <div  className="nav-wrapper">
         <nav className = "black">
         { ((localStorage.getItem("jwt")===null))?
-        <a class="brand-logo center">Blue Sky Buy</a>
+        <a class="brand-logo center">Crowd Buy
+      </a>
         :(
           <a s class="brand-logo center">Welcome {localStorage.getItem("name")} !</a>)}
 
