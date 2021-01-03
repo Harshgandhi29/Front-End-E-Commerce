@@ -16,7 +16,7 @@ export default class Shop extends React.Component{
     }
 
 componentDidMount =  ()=>{
-axios.get('https://crowdbuy.herokuapp.com/product',{
+axios.get('/product',{
         headers: {
           'Authorization': `Bearer ${localStorage.getItem("jwt")}`
         }
@@ -41,7 +41,7 @@ cart = (data,title,index,low)=>{
   if (low){
     localStorage.setItem(title,qu+1)
 
-    axios.post('https://crowdbuy.herokuapp.com/shoppingcart',{
+    axios.post('/shoppingcart',{
       productId: data,
       user_id:localStorage.getItem("id")
     },
@@ -80,7 +80,7 @@ else{
 }
 
 remove =()=>{
-  axios.post('https://crowdbuy.herokuapp.com/product',{
+  axios.post('/product',{
     userId:localStorage.getItem("id")
   },
   {headers: {
