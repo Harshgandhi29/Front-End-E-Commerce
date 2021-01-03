@@ -76,7 +76,6 @@ render(){
                 </div>
                
                 </li>
-              
 
                 )}
                 {  this.sum(parseFloat(value.price)* parseFloat(localStorage.getItem(value.title)))}
