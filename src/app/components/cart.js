@@ -30,7 +30,7 @@ console.log(response.data)
 }
 
 delete =(data,total)=>{
-    axios.put('https://crowdbuy.herokuapp.com/getcart',{
+    axios.post('https://crowdbuy.herokuapp.com/getcart',{
         data:data
     },{
         headers: {
