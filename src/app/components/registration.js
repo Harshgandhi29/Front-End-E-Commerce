@@ -38,7 +38,7 @@ class register extends React.Component{
                 id:response.data._id
             })
             console.log(this.state.id)
-            this.props.history.push('/login')
+            this.props.history.push('https://gifted-jang-7de344.netlify.app/login')
             window.location.reload(false);
           }, (error) => {
               this.setState({
