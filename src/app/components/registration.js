@@ -27,7 +27,7 @@ class register extends React.Component{
     }
     handlesubmit=(event)=>{
         event.preventDefault(); //stops from refreshing the form
-        axios.post('https://cors-anywhere.herokuapp.com/https://crowdbuy.herokuapp.com/register', {
+        axios.post('https://crowdbuy.herokuapp.com/register', {
             name:this.state.name,
             email: this.state.email,
             password: this.state.password

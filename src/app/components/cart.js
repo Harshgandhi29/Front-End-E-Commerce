@@ -14,7 +14,7 @@ class Cart extends React.Component{
     componentDidMount  =()=>{
 
         localStorage.setItem("total", 0)
-        axios.get('https://cors-anywhere.herokuapp.com/https://crowdbuy.herokuapp.com/getcart',{
+        axios.get('https://crowdbuy.herokuapp.com/getcart',{
             headers: {
               'Authorization': `Bearer ${localStorage.getItem("jwt")}`
             }}
@@ -30,7 +30,7 @@ console.log(response.data)
 }
 
 delete =(data,total)=>{
-    axios.put('https://cors-anywhere.herokuapp.com/https://crowdbuy.herokuapp.com/getcart',{
+    axios.put('https://crowdbuy.herokuapp.com/getcart',{
         data:data
     },{
         headers: {

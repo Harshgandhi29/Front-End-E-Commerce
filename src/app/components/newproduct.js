@@ -52,24 +52,20 @@ fileSelectedHandler=event=>{
           }).then((response) => {
             this.setState({
                 errorMessage:"Item has been added Successfully!"
-                
+
             })
             this.props.history.push('/shop')},
             (error)=>{
               this.setState({
-                
+
                 errorMessage:"Please Try Agin, All Entries Are Required"
             }
             )
-          
-          
           }
-
-    
           )}
         else{
           this.setState({
-                
+
             errorMessage:"Please Try Agin, All Entries Are Required"
         }
         )
