@@ -47,7 +47,6 @@ delete =(data,total)=>{
     })
     var a =  parseFloat(localStorage.getItem('total'))
     localStorage.setItem('total', a - total)
-    window.location.reload(false);
 }
 
 
