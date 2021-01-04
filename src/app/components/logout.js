@@ -6,9 +6,11 @@ import axios from 'axios';
 
 class Logout extends React.Component{
     componentDidMount() {
+
         localStorage.clear()
 
-        this.props.history.push('/login')
+        this.props.history.push('/')
+        window.location.reload(false);
     }
     render(){
 

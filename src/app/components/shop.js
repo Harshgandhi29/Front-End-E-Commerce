@@ -122,20 +122,9 @@ remove =()=>{
     <p>{value.description}</p>
   </div>
 
- <button class="btn waves-effect waves-light black"
- onClick={()=>{
-   this.cart(value._id,value.title,index,true)
- }}
- type="submit" name="action">Add To Cart  ({localStorage.getItem(value.title)})</button>
 
 
-
-<button  class="btn waves-effect waves-light red" onClick={()=>{
-  this.cart(value._id,value.title,index,false)
-}} type="submit" name="action">Remove From Cart  </button>
-
-
-{
+ {
   this.find(value.userId)? <button class="btn waves-effect waves-light white"
   onClick={()=>{
     this.remove()
@@ -143,7 +132,17 @@ remove =()=>{
 
   type="submit" style={{color:"black"}}name="action">Delete</button>
 
-:(<div></div>)}
+:( <button class="btn waves-effect waves-light black"
+onClick={()=>{
+  this.cart(value._id,value.title,index,true)
+}}
+type="submit" name="action">Add To Cart  ({localStorage.getItem(value.title)})</button>)}
+<button  class="btn waves-effect waves-light red" onClick={()=>{
+  this.cart(value._id,value.title,index,false)
+}} type="submit" name="action">Remove From Cart  </button>
+
+
+
 </div>
 
 

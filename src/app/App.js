@@ -56,7 +56,7 @@ class App extends React.Component {
     <Route path = "/logout" render = {() =><Logout loggedout = {this.loggedout}/>}/>
     <Route path = "/cart" exact component = {Cart}/>
     <Route path = "/shop/:id" exact component = {ItemDetail}/>
-    <Route path = "/" exact component = {About}/>
+    <Route path = "/" exact component = {Login}/>
     </Switch>
 
     </BrowserRouter>
