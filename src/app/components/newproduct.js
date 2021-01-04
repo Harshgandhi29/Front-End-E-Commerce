@@ -57,23 +57,20 @@ fileSelectedHandler=event=>{
             this.props.history.push('/shop')},
             (error)=>{
               this.setState({
-
                 errorMessage:"Please Try Agin, All Entries Are Required"
             }
             )
           }
+
           )}
         else{
           this.setState({
-
             errorMessage:"Please Try Agin, All Entries Are Required"
         }
         )
         }
         }
-        
-        
-        
+
     render(){
         return(
             <div style={{maxWidth:"550px", margin:"0px auto"}} className="row">
