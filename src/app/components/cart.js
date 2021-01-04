@@ -31,7 +31,7 @@ class Cart extends React.Component{
             total:0
         })
         console.log(response.data)
-       // this.sum()
+        this.sum()
     })
 }
 
@@ -51,16 +51,21 @@ delete =(data,total)=>{
 }
 
 
-sum = ()=>{
-    this.state.items.map((value,index)=>{
-        return (
-            this.setState({
-                price: this.state.price + (parseFloat(value.price)* parseFloat(localStorage.getItem(value.title)))
+    sum = ()=>{
+        var pricing = 0;
+        this.state.items.map((value,index)=>{
+            return (
+                pricing= pricing + (parseFloat(value.price)* parseFloat(localStorage.getItem(value.title)))
+                )
+   
             })
-            )
-        }
-    )
+            this.setState({
+                price: pricing
+    })
 }
+
+
+
 
 
 
@@ -68,7 +73,6 @@ sum = ()=>{
 render(){
     return(
         <div style={{margin:"auto",width:"25%"} }>
-        { this.setState({price:0})}
         <div  style={{alignContent:"center"} } class="col s12 m6 ">
           <div style={{height: "auto",width:"450px"} } class="card black">
             <div class="card-content white-text">
