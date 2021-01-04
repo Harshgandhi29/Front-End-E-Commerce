@@ -31,7 +31,7 @@ class Cart extends React.Component{
             total:0
         })
         console.log(response.data)
-        this.sum()
+       // this.sum()
     })
 }
 
