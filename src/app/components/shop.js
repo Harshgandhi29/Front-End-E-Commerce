@@ -53,7 +53,6 @@ cart = (data,title,index,low)=>{
       console.log(response)
     
     })
-    //window.location.reload();
       console.log("ADDED TO CART")
     }
 
@@ -65,9 +64,6 @@ cart = (data,title,index,low)=>{
     q:localStorage.getItem(title)
   })
   console.log( localStorage.getItem(title))
-
-
-
 }
 
 
@@ -80,7 +76,7 @@ else{
 }
 
 remove =()=>{
-  axios.post('https://crowdbuy.herokuapp.com/product',{
+  axios.put('https://crowdbuy.herokuapp.com/product',{
     userId:localStorage.getItem("id")
   },
   {headers: {
@@ -132,11 +128,14 @@ remove =()=>{
 
   type="submit" style={{color:"black"}}name="action">Delete</button>
 
-:( <button class="btn waves-effect waves-light black"
+:( 
+
+  <button class="btn waves-effect waves-light black"
 onClick={()=>{
   this.cart(value._id,value.title,index,true)
 }}
 type="submit" name="action">Add To Cart  ({localStorage.getItem(value.title)})</button>)}
+
 <button  class="btn waves-effect waves-light red" onClick={()=>{
   this.cart(value._id,value.title,index,false)
 }} type="submit" name="action">Remove From Cart  </button>

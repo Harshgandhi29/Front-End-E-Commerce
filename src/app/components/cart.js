@@ -15,9 +15,7 @@ class Cart extends React.Component{
 
 
     componentDidMount  =()=>{
-        console.log('mounted')
         localStorage.setItem("total", 0)
-        console.log('mounted')
         console.log(localStorage.getItem("total"))
         axios.get('https://crowdbuy.herokuapp.com/getcart',{
             headers: {
@@ -37,16 +35,18 @@ class Cart extends React.Component{
 
 
 delete =(data,total)=>{
+    console.log(data)
     axios.post('https://crowdbuy.herokuapp.com/getcart',{
         data:data
     },{
         headers: {
           'Authorization': `Bearer ${localStorage.getItem("jwt")}`
         }}).then((response)=>{
-        console.log(response)
+        //localStorage.setItem(value.title)
+        console.log(response.data)
     })
-    var a =  parseFloat(localStorage.getItem('total'))
-    localStorage.setItem('total', a - total)
+    // console.log('shop')
+    this.props.history.push('/shop')
 }
 
 
@@ -62,9 +62,6 @@ delete =(data,total)=>{
                 price: pricing
     })
 }
-
-
-
 
 
 
@@ -89,7 +86,13 @@ render(){
                         parseFloat(value.price)* parseFloat(localStorage.getItem(value.title))
                        }
                     <a class="secondary-content ">
-                   <a onClick ={()=>{this.delete(value._id,( parseFloat(value.price)* parseFloat(localStorage.getItem(value.title))))}}class="waves-effect waves-light btn-medium black-text">Remove All</a>
+                   <a onClick ={
+                       ()=>{
+                           this.delete(value._id,( parseFloat(value.price)* parseFloat(localStorage.getItem(value.title))))
+                           localStorage.setItem(value.title)
+                        }
+                    }
+                       class="waves-effect waves-light btn-medium black-text">Remove All</a>
 
                 </a>
                 </div>
