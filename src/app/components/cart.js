@@ -42,7 +42,7 @@ delete =(data,total)=>{
         headers: {
           'Authorization': `Bearer ${localStorage.getItem("jwt")}`
         }}).then((response)=>{
-        //localStorage.setItem(value.title)
+        //localStorage.setItem(value.title,0)
         console.log(response.data)
     })
     // console.log('shop')
@@ -89,7 +89,7 @@ render(){
                    <a onClick ={
                        ()=>{
                            this.delete(value._id,( parseFloat(value.price)* parseFloat(localStorage.getItem(value.title))))
-                           localStorage.setItem(value.title)
+                           localStorage.setItem(value.title,0)
                         }
                     }
                        class="waves-effect waves-light btn-medium black-text">Remove All</a>

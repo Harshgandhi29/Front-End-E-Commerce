@@ -23,18 +23,18 @@ export default function Nav (props){
               
             <ul id="nav-mobile" class="left hide-on-med-and-down">
             <li >
-            <Link  to ="/new">
-            <a style={{width:"50px", height:"50px" }} className="btn-floating btn-large waves-effect waves-light red">
-            <i style={{position:"absolute", paddingBottom:"30px"}} className="material-icons">add</i></a></Link>
+            <Link  to ="/new">+
+            </Link>
              </li>
-             <ul id="nav-mobile center" class="left hide-on-med-and-down ">
+         
              <li></li>
              <li></li>
  
              <li> <Link  to ="/about"> About</Link></li>
              <li> <Link  to ="/shop"> Shop</Link></li>
  
-             </ul>
+      
+
             <li>   </li>
             <li>   </li></ul>
 

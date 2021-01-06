@@ -1,13 +1,13 @@
 import 'whatwg-fetch'
 import axios from 'axios';
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {Link, useHistory,withRouter} from 'react-router-dom'
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import { Check } from '@material-ui/icons';
 
 
 
-export default class Shop extends React.Component{
+class Shop extends React.Component{
     state = {
         items :[],
         loading: true,
@@ -83,9 +83,9 @@ remove =()=>{
     'Authorization': `Bearer ${localStorage.getItem("jwt")}`
   }}).then((response)=>{
     console.log(response)
-    window.location.reload();
   })
-  
+  console.log('psuhed')
+ 
 }
 
 
@@ -122,8 +122,9 @@ remove =()=>{
 
  {
   this.find(value.userId)? <button class="btn waves-effect waves-light white"
-  onClick={()=>{
-    this.remove()
+  onClick={async ()=>{
+    await this.remove()
+    this.props.history.push('/about')
   }}
 
   type="submit" style={{color:"black"}}name="action">Delete</button>
@@ -154,3 +155,4 @@ type="submit" name="action">Add To Cart  ({localStorage.getItem(value.title)})</
 </div>   )}
 }
 
+export default withRouter(Shop);
