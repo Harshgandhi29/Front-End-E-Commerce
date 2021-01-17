@@ -1,3 +1,4 @@
+https://crowd-buy.netlify.app/
 
 The registration page ensures the user puts an email in the email field, and that the password is atleast 6 characters long. 
 The email is then checked to ensure there isnt a pre-existing email in the database. 
